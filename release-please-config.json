@@ -1,4 +1,8 @@
 {
+  "include-v-in-tag": true,
+  "include-component-in-tag": true,
+  "release-type": "python",
+  "tag-separator": "/",
   "packages": {
     ".": {
       "changelog-path": "CHANGELOG.md",
@@ -33,8 +37,5 @@
       ]
     }
   ],
-  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "include-v-in-tag": true,
-  "include-component-in-tag": true,
-  "tag-separator": "/"
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
