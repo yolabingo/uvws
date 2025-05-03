@@ -20,7 +20,7 @@
       "component": "core"
     },
     "packages/svc1": {
-      "changelog-path": "packages/svc1/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "include-component-in-tag": true,
       "path-expressions": [
         "packages/**"
