@@ -8,7 +8,6 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "attrs>=25.3.0",
     "core",
     "invoke>=2.2.0",
 ]
