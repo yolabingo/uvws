@@ -1,0 +1,18 @@
+{
+  "packages": {
+    "packages/core": {
+      "release-type": "python",
+      "component": "core"
+    },
+    "packages/svc1": {
+      "release-type": "python",
+      "component": "svc1"
+    },
+  },
+  "plugins": ["node-workspace"],
+  "separate-pull-requests": true,
+  "group-pull-request-title-pattern": "chore: release ${version}",
+  "release-type": "python",
+  "include-component-in-tag": true,
+  "include-v-in-tag": true
+} 

@@ -24,3 +24,20 @@ members = ["packages/core", "packages/svc1"]
 
 [tool.uv.sources]
 core = { workspace = true }
+svc1 = { workspace = true }
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+select = ["E", "F", "B", "I", "N", "UP", "PL", "RUF"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+testpaths = ["packages"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-v --cov=packages --cov-report=xml"
