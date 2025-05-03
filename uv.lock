@@ -202,15 +202,17 @@ wheels = [
 
 [[package]]
 name = "uvws"
-version = "0.2.0"
+version = "0.4.0"
 source = { editable = "." }
 dependencies = [
+    { name = "attrs" },
     { name = "core" },
     { name = "invoke" },
 ]
 
 [package.metadata]
 requires-dist = [
+    { name = "attrs", specifier = ">=25.3.0" },
     { name = "core", editable = "packages/core" },
     { name = "invoke", specifier = ">=2.2.0" },
 ]
