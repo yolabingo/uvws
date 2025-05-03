@@ -9,7 +9,7 @@ on:
       debug:
         description: 'Run in debug mode'
         required: false
-        default: 'false'
+        default: 'true'
 
 permissions:
   contents: write
@@ -19,6 +19,13 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      uvws--tag_name: ${{ steps.release.outputs.uvws--tag_name}}
+      uvws--release_created: ${{ steps.release.outputs.uvws--release_created}}
+      core--tag_name: ${{ steps.release.outputs.core--tag_name}}
+      core--release_created: ${{ steps.release.outputs.core--release_created}}
+      svc1--tag_name: ${{ steps.release.outputs.svc1--tag_name}}
+      svc1--release_created: ${{ steps.release.outputs.svc1--release_created}}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,8 +42,5 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
-          release-type: python
           config-file: release-please-config.json
           include-component-in-tag: true
-          monorepo-tags: true
-          package-name: uvws
