@@ -18,5 +18,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: python
-          package-name: uvws
           monorepo-tags: true
