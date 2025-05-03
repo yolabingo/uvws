@@ -7,7 +7,8 @@
       "path-expressions": [
         "**",
         "!packages/**"
-      ]
+      ],
+      "tag-separator": "/"
     },
     "packages/core": {
       "changelog-path": "packages/core/CHANGELOG.md",
@@ -15,7 +16,8 @@
       "include-component-in-tag": true,
       "path-expressions": [
         "packages/core/**"
-      ]
+      ],
+      "tag-separator": "/"
     },
     "packages/svc1": {
       "changelog-path": "packages/svc1/CHANGELOG.md",
@@ -23,8 +25,11 @@
       "include-component-in-tag": true,
       "path-expressions": [
         "packages/svc1/**"
-      ]
+      ],
+      "tag-separator": "/"
     }
   },
-  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "include-v-in-tag": true,
+  "tag-separator": "/"
 }
