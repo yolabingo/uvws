@@ -20,15 +20,3 @@ jobs:
           release-type: python
           package-name: uvws
           monorepo-tags: true
-          path: packages/core
-          changelog-types: |
-            feat: Features
-            fix: Bug Fixes
-            docs: Documentation
-            style: Style Changes
-            refactor: Code Refactoring
-            perf: Performance Improvements
-            test: Testing
-            build: Build System
-            ci: Continuous Integration
-            chore: Chores 
