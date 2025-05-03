@@ -14,17 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: astral-sh/ruff-action@v3
-      - run: ruff check --fix
-      - run: ruff format
-
       - name: Cache Python
         uses: actions/cache@v4
         with:
           path: ~/.local
-          key: ${{ runner.os }}-python-3.13-${{ hashFiles('.python-version') }}
+          key: ${{ runner.os }}-python-${{ hashFiles('.python-version') }}
           restore-keys: |
-            ${{ runner.os }}-python-3.13-
+            ${{ runner.os }}-python-
       
       - name: Install uv with cache
         uses: astral-sh/setup-uv@v6
@@ -32,6 +28,10 @@ jobs:
           enable-cache: true
           cache-dependency-glob: "uv.lock"
 
+      - name: Ruff lint and format
+        uses: astral-sh/ruff-action@v3
+      - run: ruff check --fix
+      - run: ruff format
+
       - name: Install the project
         run: uv lock && uv sync --locked --all-extras --dev
-
