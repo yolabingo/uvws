@@ -12,7 +12,7 @@
       "component": "uvws"
     },
     "packages/core": {
-      "changelog-path": "packages/core/CHANGELOG.md",
+      "changelog-path": "CHANGELOG.md",
       "release-type": "python",
       "include-component-in-tag": true,
       "path-expressions": [
@@ -26,15 +26,22 @@
       "release-type": "python",
       "include-component-in-tag": true,
       "path-expressions": [
-        "packages/svc1/**"
+        "packages/**"
       ],
       "tag-separator": "/",
       "component": "svc1"
     }
   },
+  "plugins": [
+    {
+      "type": "linked-versions",
+      "groupName": "my group",
+      "components": [
+        "uvws", "core", "svc1"
+      ]
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "include-v-in-tag": true,
-  "tag-separator": "/",
-  "monorepo-tags": true,
-  "package-name": "uvws"
+  "tag-separator": "/"
 }
