@@ -30,22 +30,11 @@ jobs:
           echo "Current branch: ${{ github.ref }}"
           echo "Event: ${{ github.event_name }}"
           ls -la
-          cat .release-please-manifest.json
           cat release-please-config.json
           
       - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: python
-          monorepo-tags: true
-          changelog-types: |
-            feat: Features
-            fix: Bug Fixes
-            docs: Documentation
-            style: Style Changes
-            refactor: Code Refactoring
-            perf: Performance Improvements
-            test: Testing
-            build: Build System
-            ci: Continuous Integration
-            chore: Chores
+          config-file: release-please-config.json
+          include-component-in-tag: true
