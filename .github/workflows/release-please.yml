@@ -38,3 +38,5 @@ jobs:
           release-type: python
           config-file: release-please-config.json
           include-component-in-tag: true
+          monorepo-tags: true
+          package-name: uvws
