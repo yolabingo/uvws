@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.3.0](https://github.com/yolabingo/uvws/compare/v0.2.0...v0.3.0) (2025-05-03)
+
+
+### Features
+
+* versiontest ([b355269](https://github.com/yolabingo/uvws/commit/b35526995a6ca824aa41a888fe559587201c6fd7))
+* versiontest ([0094887](https://github.com/yolabingo/uvws/commit/00948870bf272b198b9ce1ead60c7a059e38bdee))
+* versiontestasdf ([429248a](https://github.com/yolabingo/uvws/commit/429248aa2e559acc83d666376c9568184245141a))
+* versiontestasdf ([b09bb15](https://github.com/yolabingo/uvws/commit/b09bb1573ada822f9280142f92859a2a7d921c86))
+* versiontestasdf ([4b631d8](https://github.com/yolabingo/uvws/commit/4b631d8caf1ced0ad556f5c626fb883e49adf4c4))
+* versiontestasdf ([f7c5477](https://github.com/yolabingo/uvws/commit/f7c5477457268171ee1c32a97e360992970ec0a0))
+* versiontestasdf ([9868c25](https://github.com/yolabingo/uvws/commit/9868c25b12cf8e4c89e1e60b5876fc1d4a49083e))
+* versiontestasdf ([1d64059](https://github.com/yolabingo/uvws/commit/1d640594168d9c62d86ffe861fdbbda1be0ee795))
+* versiontestasdf ([1918557](https://github.com/yolabingo/uvws/commit/19185577cfccef049ad26a7f3f54cbb8207054c9))
+* versiontestasdf ([0cc694c](https://github.com/yolabingo/uvws/commit/0cc694c81ee9288065966a62a655094e80407df7))
+* versiontestasdf ([887daab](https://github.com/yolabingo/uvws/commit/887daab5a349655f0e108cdc28d6d443597fdafe))
+
 ## [0.2.0](https://github.com/yolabingo/uvws/compare/v0.1.0...v0.2.0) (2025-05-03)
 
 
