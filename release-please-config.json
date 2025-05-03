@@ -9,8 +9,8 @@
         "!packages/**"
       ]
     },
-     "packages/core": {
-      "changelog-path": "CHANGELOG.md",
+    "packages/core": {
+      "changelog-path": "packages/core/CHANGELOG.md",
       "release-type": "python",
       "include-component-in-tag": true,
       "path-expressions": [
@@ -18,11 +18,11 @@
       ]
     },
     "packages/svc1": {
-      "changelog-path": "CHANGELOG.md",
+      "changelog-path": "packages/svc1/CHANGELOG.md",
       "release-type": "python",
       "include-component-in-tag": true,
       "path-expressions": [
-        "**"
+        "packages/svc1/**"
       ]
     }
   },

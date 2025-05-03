@@ -5,17 +5,49 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Run in debug mode'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
   pull-requests: write
+  actions: read
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v1
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Debug Info
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug == 'true' }}
+        run: |
+          echo "Current branch: ${{ github.ref }}"
+          echo "Event: ${{ github.event_name }}"
+          ls -la
+          cat .release-please-manifest.json
+          cat release-please-config.json
+          
+      - uses: https://github.com/google-github-actions/release-please-action@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: python
+          package-name: uvws
           monorepo-tags: true
+          path: packages/core
+          changelog-types: |
+            feat: Features
+            fix: Bug Fixes
+            docs: Documentation
+            style: Style Changes
+            refactor: Code Refactoring
+            perf: Performance Improvements
+            test: Testing
+            build: Build System
+            ci: Continuous Integration
+            chore: Chores
