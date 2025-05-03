@@ -83,7 +83,7 @@ wheels = [
 
 [[package]]
 name = "core"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "packages/core" }
 dependencies = [
     { name = "invoke" },
@@ -191,7 +191,7 @@ wheels = [
 
 [[package]]
 name = "uvws"
-version = "0.1.0"
+version = "0.1.4"
 source = { editable = "." }
 dependencies = [
     { name = "core" },
