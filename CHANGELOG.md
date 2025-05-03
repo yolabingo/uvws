@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.4.0](https://github.com/yolabingo/uvws/compare/v0.3.0...v0.4.0) (2025-05-03)
+
+
+### Features
+
+* versiontestasdf ([f4d255f](https://github.com/yolabingo/uvws/commit/f4d255f06400f1fdae682fd06f7bcf553aba09ac))
+* versiontestasdf ([4d6221b](https://github.com/yolabingo/uvws/commit/4d6221bac6eadb36074705f8c544aa6d9405bf28))
+* versiontestasdf ([2cdfc9a](https://github.com/yolabingo/uvws/commit/2cdfc9a942b6a8eb9aa3d3f7681bd0fe54296f75))
+* versiontestasdf ([72d05ce](https://github.com/yolabingo/uvws/commit/72d05ce3187859fe503f4a5f1417d42a53684e5b))
+
 ## [0.3.0](https://github.com/yolabingo/uvws/compare/v0.2.0...v0.3.0) (2025-05-03)
 
 
