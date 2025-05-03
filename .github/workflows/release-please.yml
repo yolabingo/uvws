@@ -33,13 +33,11 @@ jobs:
           cat .release-please-manifest.json
           cat release-please-config.json
           
-      - uses: https://github.com/google-github-actions/release-please-action@v3
+      - uses: googleapis/release-please-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: python
-          package-name: uvws
           monorepo-tags: true
-          path: packages/core
           changelog-types: |
             feat: Features
             fix: Bug Fixes
