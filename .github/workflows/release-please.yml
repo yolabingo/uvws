@@ -35,7 +35,7 @@ jobs:
           
       - uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           release-type: python
           monorepo-tags: true
           changelog-types: |
