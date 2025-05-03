@@ -1,0 +1,26 @@
+[project]
+name = "uvws"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Todd Jacobsen", email = "yolabingo@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "core",
+    "invoke>=2.2.0",
+]
+
+[project.scripts]
+uvws = "uvws:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.workspace]
+members = ["packages/core", "packages/svc1"]
+
+[tool.uv.sources]
+core = { workspace = true }
