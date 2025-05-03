@@ -9,7 +9,6 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "core",
-    "dunk>=0.5.0b0",
     "invoke>=2.2.0",
 ]
 
