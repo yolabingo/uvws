@@ -92,7 +92,7 @@ wheels = [
 
 [[package]]
 name = "core"
-version = "0.2.0"
+version = "0.6.0"
 source = { editable = "packages/core" }
 dependencies = [
     { name = "attrs" },
@@ -269,7 +269,7 @@ wheels = [
 
 [[package]]
 name = "svc1"
-version = "0.1.0"
+version = "0.6.0"
 source = { editable = "packages/svc1" }
 dependencies = [
     { name = "black" },
@@ -302,10 +302,9 @@ wheels = [
 
 [[package]]
 name = "uvws"
-version = "0.5.0"
+version = "0.6.0"
 source = { editable = "." }
 dependencies = [
-    { name = "attrs" },
     { name = "core" },
     { name = "dunk" },
     { name = "invoke" },
@@ -313,7 +312,6 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "attrs", specifier = ">=25.3.0" },
     { name = "core", editable = "packages/core" },
     { name = "dunk", specifier = ">=0.5.0b0" },
     { name = "invoke", specifier = ">=2.2.0" },
