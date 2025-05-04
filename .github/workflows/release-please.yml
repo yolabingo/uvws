@@ -27,6 +27,13 @@ jobs:
       svc1--tag_name: ${{ steps.release.outputs.svc1--tag_name}}
       svc1--release_created: ${{ steps.release.outputs.svc1--release_created}}
     steps:
+      - name: Acquire lock
+        uses: softprops/turnstyle@v1
+        with:
+          poll-interval-seconds: 10
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
