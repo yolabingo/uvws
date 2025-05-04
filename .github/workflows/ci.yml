@@ -6,12 +6,53 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
 jobs:
-  uv-example:
+  semantic-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        with:
+          validateSingleCommit: true  # if PR has only one commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      uvws--tag_name: ${{ steps.release.outputs.uvws--tag_name}}
+      uvws--release_created: ${{ steps.release.outputs.uvws--release_created}}
+      core--tag_name: ${{ steps.release.outputs.core--tag_name}}
+      core--release_created: ${{ steps.release.outputs.core--release_created}}
+      svc1--tag_name: ${{ steps.release.outputs.svc1--tag_name}}
+      svc1--release_created: ${{ steps.release.outputs.svc1--release_created}}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          config-file: release-please-config.json
+          include-component-in-tag: true
+        
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Update uv.lock after release-please bumps versions
+        run: uv lock
+  
+  ci:
     name: python
     runs-on: ubuntu-latest
-    if: ${{ github.ref != 'refs/heads/release-please' }}
-
     steps:
       - uses: actions/checkout@v4
       
