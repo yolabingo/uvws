@@ -10,14 +10,16 @@
         "**",
         "!packages/**"
       ],
-      "component": "uvws"
+      "component": "uvws",
+      "pull-request-title-pattern": "chore(uvws): release ${version}"
     },
     "packages/core": {
       "changelog-path": "CHANGELOG.md",
       "path-expressions": [
         "packages/core/**"
       ],
-      "component": "core"
+      "component": "core",
+      "pull-request-title-pattern": "chore(core): release ${version}"
     },
     "packages/svc1": {
       "changelog-path": "CHANGELOG.md",
@@ -25,7 +27,8 @@
       "path-expressions": [
         "packages/**"
       ],
-      "component": "svc1"
+      "component": "svc1",
+      "pull-request-title-pattern": "chore(svc1): release ${version}"
     }
   },
   "plugins": [
@@ -37,5 +40,6 @@
       ]
     }
   ],
-  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "pull-request-title-pattern": "chore: release ${version}"
 }
