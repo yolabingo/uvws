@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.8.0](https://github.com/yolabingo/uvws/compare/uvws/v0.7.0...uvws/v0.8.0) (2025-05-04)
+
+
+### Features
+
+* a ([#37](https://github.com/yolabingo/uvws/issues/37)) ([2e80f2b](https://github.com/yolabingo/uvws/commit/2e80f2bcb502e98384b75e010b260e526ed6a5d2))
+* A ([#39](https://github.com/yolabingo/uvws/issues/39)) ([60f8074](https://github.com/yolabingo/uvws/commit/60f80744fe361704f44e38a861bd829b30b07a53))
+* foo ([#41](https://github.com/yolabingo/uvws/issues/41)) ([40bb898](https://github.com/yolabingo/uvws/commit/40bb89868dc4875ac1fbf684e1bf80cecce27346))
+* foo ([#45](https://github.com/yolabingo/uvws/issues/45)) ([7c7d609](https://github.com/yolabingo/uvws/commit/7c7d609f6294b80e02a7b0819e5bf7985ebf2591))
+* woo ([#42](https://github.com/yolabingo/uvws/issues/42)) ([556a74f](https://github.com/yolabingo/uvws/commit/556a74f01eb61e6c682bf5ec23c0ff830e889a65))
+
 ## [0.7.0](https://github.com/yolabingo/uvws/compare/uvws/v0.6.0...uvws/v0.7.0) (2025-05-04)
 
 
