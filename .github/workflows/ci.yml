@@ -10,7 +10,7 @@ jobs:
   uv-example:
     name: python
     runs-on: ubuntu-latest
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.event != 'workflow_dispatch' }}
+    if: ${{ github.ref != 'refs/heads/release-please' }}
 
     steps:
       - uses: actions/checkout@v4
