@@ -51,7 +51,7 @@ jobs:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           config-file: release-please-config.json
           include-component-in-tag: true
-       
+
       - name: Install uv
         uses: astral-sh/setup-uv@v6
         with:
