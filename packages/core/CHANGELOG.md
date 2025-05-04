@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/yolabingo/uvws/compare/core/v0.7.0...core/v0.8.0) (2025-05-04)
+
+
+### Miscellaneous Chores
+
+* **core:** Synchronize my group versions
+
 ## [0.7.0](https://github.com/yolabingo/uvws/compare/core/v0.6.0...core/v0.7.0) (2025-05-04)
 
 
